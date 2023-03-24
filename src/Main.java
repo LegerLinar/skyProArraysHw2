@@ -33,6 +33,23 @@ public class Main {
 
     public static void task2 () {
         System.out.println("Задача 2");
-//        ... // Пишем код для задачи 2
+//         Также бухгалтерия попросила найти минимальную и максимальную трату за день.
+//Напишите программу, которая решит эту задачу, и выведите в консоль результат в формате:
+// «Минимальная сумма трат за день составила … рублей. Максимальная сумма трат за день составила … рублей».
+        int[ ] arr = generateRandomArray();
+        int maxSpent = arr[0];
+        int minSpent = arr[0];
+        for (int i : arr) {
+            if (maxSpent<i) {
+                maxSpent = i;
+            }
+        }
+        for (int i : arr) {
+            if (minSpent>i) {
+                minSpent = i;
+            }
+
+        }
+        System.out.printf("Минимальная сумма трат за день составила %d рублей. Максимальная сумма трат за день составила %d рублей\n", minSpent, maxSpent);
     }
 }
