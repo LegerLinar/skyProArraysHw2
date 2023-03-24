@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -52,4 +53,22 @@ public class Main {
         }
         System.out.printf("Минимальная сумма трат за день составила %d рублей. Максимальная сумма трат за день составила %d рублей\n", minSpent, maxSpent);
     }
+    
+    public static void task3(){
+        System.out.println("Задача 3");
+//        Теперь бухгалтерия хочет понять, какую в среднем сумму компания тратила в течение 30 дней.
+//Напишите программу, которая посчитает среднее значение трат за месяц (то есть сумму всех трат за месяц поделить на количество дней),
+// и выведите в консоль результат в формате: «Средняя сумма трат за месяц составила … рублей».
+//Важно помнить: подсчет среднего значения может иметь остаток, то есть быть не целым, а дробным числом.
+        int[ ] arr = generateRandomArray();
+
+        float averageExpense = (float) 0;
+
+        for (int i : arr) {
+            averageExpense+= i;
+        }
+        averageExpense /= 30;
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей\n", averageExpense);
+    }
+
 }
